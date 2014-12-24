@@ -63,35 +63,42 @@ while x != ord('4'):
     if x == ord("q"): break
     elif x == ord('b'):
         curses.endwin()
-        execute_cmd("ls books")
+        execute_cmd("ls ./books")
     elif x == ord('g'):
         curses.endwin()
         title = raw_input('Enter a book title: ')
         content = raw_input('Enter your book text: ')
-        book = open(title+".txt","w") #how to file this inside /books
+        book = open(title+".txt","w") #change to file this inside /books
         book.write(content)
         book.close()
-        
-    elif x == ord('f'):
-        curses.endwin()
-        execute_cmd("fortune | cowsay")
-    elif x == ord('b'):
-        curses.endwin()
-        execute_cmd("python ~/Documents/pythonprograms/blackjack.py")
-    elif x == ord('s'):
-        curses.endwin()
-        execute_cmd("ncmpcpp")
-    elif x == ord('w'):
-        curses.endwin()
-        execute_cmd("lynx -dump -term=vt100 https://weather.yahoo.com/united-states/pennsylvania/philadelphia-12765511/")
+
     elif x == ord('c'):
         curses.endwin()
-        execute_cmd("google calendar list | less -FX")
-    elif x == ord('l'):
-        curses.endwin()
-        execute_cmd("sl")
-    elif x == ord('t'):
-        curses.endwin()
-        execute_cmd("google calendar list --date today")
+        screen = curses.initscr()
+        screen.clear()
+        screen.border(0)
+        screen.addstr(1, 1, "======================================================")
+        screen.addstr(2, 1, "======================================================")
+        screen.addstr(3, 1, "======================================================")
+        screen.addstr(4, 1, "======================================================")
+        screen.addstr(5, 1, "======================================================")
+        screen.addstr(6, 1, "======================================================")
+        screen.addstr(7, 1, "======================================================")
+        screen.addstr(8, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(9, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(10, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(11, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(12, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(13, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(14, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(15, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(16, 1, "|||||||||||||||                        |||||||||||||||")
+        screen.addstr(17, 1, "======================================================")
+        screen.addstr(18, 1, "======================================================")
+        screen.addstr(19, 1, "======================================================")
+        screen.addstr(20, 1, "======================================================")
+        screen.addstr(21, 1, "======================================================")
+        screen.addstr(22, 1, "======================================================")
+        raw_input()
 curses.endwin()
 execute_cmd("clear")
